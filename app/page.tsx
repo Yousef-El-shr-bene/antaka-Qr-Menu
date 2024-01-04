@@ -17,7 +17,10 @@ export default function Home() {
     const q = query(collection(db, "items"));
     const unsubscribe = onSnapshot(q, (querySnapshot: [{description : string , img : string , name : string , price : number }] | any) => {
       let itemsAray : string[] | any = [];
-      querySnapshot.forEach((doc: {description: any}) => {
+      querySnapshot.forEach((doc: {
+        id: any;
+        data(): any;description: any
+}) => {
         itemsAray.push({ ...doc.data(), id: doc.id } );
       });
       setitem(itemsAray)

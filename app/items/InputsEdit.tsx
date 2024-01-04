@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { db, storage } from '../firebase';
 import { getDownloadURL, ref, uploadBytes , } from 'firebase/storage';
 import { v4 } from 'uuid';
-export  function InputsEdit({crdData}) {
+export  function InputsEdit({crdData}: any) {
   const [loding , setloding]=useState(false)
     const {description ,img ,name ,price , id} = crdData    
   const [imgeror, setimgeror] = useState("");
