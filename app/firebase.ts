@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-import { getFirestore } from "firebase/firestore";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 import {getStorage} from "firebase/storage"
 
 // Your web app's Firebase configuration
@@ -20,3 +20,10 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 const storage = getStorage(app)
 export {app,db,storage}
+//  const itemRef = collection(db, "items");
+// const q = query(itemRef, where("capital", "==", "it"));
+// async function gg() {
+//   console.log(await getDocs(q).,"eeee");
+  
+// }
+// gg()

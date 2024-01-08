@@ -42,7 +42,6 @@ export default function Auth() {
             />
             {loding ? <span className="loading loading-spinner loading-lg text-center"></span> : <button onClick={onLogin} className="btn m-3">log in</button>}
             <h1>{error}</h1>
-            <button onClick={out} >out</button>
           </div>
     </div>
   )
