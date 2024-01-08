@@ -22,7 +22,7 @@ export default function Auth() {
               type="text"
               name=""
               id=""
-              className="input w-auto max-w-xs m-3 "
+              className="input w-auto max-w-xs m-3 bg-black text-white"
               placeholder="username"
               value={uANDp.username}
               onChange={(i: any) => {
@@ -33,14 +33,14 @@ export default function Auth() {
               type="password"
               name=""
               id=""
-              className="input w-auto max-w-xs m-3"
+              className="input w-auto max-w-xs m-3 bg-black text-white"
               placeholder="password"
               value={uANDp.password}
               onChange={(i: any) => {
                 setuANDp({...uANDp,password : i.target.value})
               }}
             />
-            {loding ? <span className="loading loading-spinner loading-lg text-center"></span> : <button onClick={onLogin} className="btn m-3">log in</button>}
+            {loding ? <span className="loading loading-spinner loading-lg text-center"></span> : <button onClick={onLogin} className="btn m-3  bg-black text-white">log in</button>}
             <h1>{error}</h1>
           </div>
     </div>

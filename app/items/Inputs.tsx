@@ -88,14 +88,14 @@ export  function Inputs() {
               name="Choose the image"
               id=""
               ref={imgeselect}
-              className="file-input w-auto max-w-xs m-3"
+              className="file-input w-auto max-w-xs m-3  bg-black text-white"
             />
             <h1> {imgeror} </h1>
             <input
               type="text"
               name=""
               id=""
-              className="input w-auto max-w-xs m-3 "
+              className="input w-auto max-w-xs m-3  bg-black text-white"
               placeholder="Item name :- Espresso maccato"
               value={data.name}
               onChange={(i: any) => {
@@ -104,7 +104,7 @@ export  function Inputs() {
             />
             <h1> {nameeror} </h1>
             <textarea
-              className="textarea w-auto max-w-xs m-3"
+              className="textarea w-auto max-w-xs m-3  bg-black text-white"
               placeholder="description :- Espresso , milk "
               value={data.description}
               onChange={(i: any) => {
@@ -116,7 +116,7 @@ export  function Inputs() {
               type="number"
               name=""
               id=""
-              className="input w-auto max-w-xs m-3"
+              className="input w-auto max-w-xs m-3  bg-black text-white"
               placeholder="price :- 100"
               value={data.price}
               onChange={(i: any) => {
@@ -128,7 +128,7 @@ export  function Inputs() {
               type="text"
               name=""
               id=""
-              className="input w-auto max-w-xs m-3"
+              className="input w-auto max-w-xs m-3  bg-black text-white"
               placeholder="category :- drink , hot , Espresso"
               value={data.category}
               onChange={(i: any) => {
@@ -136,7 +136,7 @@ export  function Inputs() {
               }}
             />
             <h1>{categoryError}</h1>
-            {loding ? <span className="loading loading-spinner loading-lg text-center"></span> : <button onClick={uplode} className="btn m-3">uplode</button>}
+            {loding ? <span className="loading loading-spinner loading-lg text-center"></span> : <button onClick={uplode} className="btn m-3  bg-black text-white">uplode</button>}
           </div>
         </div>
   </>

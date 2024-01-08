@@ -22,8 +22,8 @@ export default function RootLayout({
       <div className='bg-white text-black ' >
       {children}
       </div>
-      <div className="bg-slate-300 w-full h- text-black flex items-center justify-around text-2xl">
-<h1 className='fixed bottom-0 z-10 bg-slate-500 w-full text-center ' > يتم تتبيق 15% ضريبة قيمة مضافة و 16% ضريبو سرفيس </h1>
+      <div className="bg-slate-50 shadow-2xl w-full h- text-black flex items-center justify-around text-2xl">
+<h1 className='sticky  bottom-0 z-10  w-full text-center text-sm' > All Prices Subject to 12% Servic & 14% VAT </h1>
       </div>
         </body>
     </html>

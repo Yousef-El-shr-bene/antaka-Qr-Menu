@@ -73,7 +73,7 @@ export  function InputsEdit({crdData}: any) {
               type="text"
               name=""
               id=""
-              className="input w-auto max-w-xs m-3 "
+              className="input w-auto max-w-xs m-3  bg-black text-white"
               placeholder="Item name"
               value={data.name}
               onChange={(i: any) => {
@@ -82,7 +82,7 @@ export  function InputsEdit({crdData}: any) {
             />
             <h1> {nameeror} </h1>
             <textarea
-              className="textarea w-auto max-w-xs m-3"
+              className="textarea w-auto max-w-xs m-3  bg-black text-white"
               placeholder="Item description"
               value={data.description}
               onChange={(i: any) => {
@@ -94,7 +94,7 @@ export  function InputsEdit({crdData}: any) {
               type="number"
               name=""
               id=""
-              className="input w-auto max-w-xs m-3"
+              className="input w-auto max-w-xs m-3  bg-black text-white"
               placeholder="Item price"
               value={data.price}
               onChange={(i: any) => {
@@ -106,7 +106,7 @@ export  function InputsEdit({crdData}: any) {
               type="text"
               name=""
               id=""
-              className="input w-auto max-w-xs m-3"
+              className="input w-auto max-w-xs m-3  bg-black text-white"
               placeholder="category :- drink , hot , Espresso"
               value={data.category}
               onChange={(i: any) => {
@@ -114,7 +114,7 @@ export  function InputsEdit({crdData}: any) {
               }}
             />
             <h1>{categoryError}</h1>
-            {loding ? <span className="loading loading-spinner loading-lg text-center"></span> : <button onClick={uplode} className="btn m-3">update</button>}
+            {loding ? <span className="loading loading-spinner loading-lg text-center "></span> : <button onClick={uplode} className="btn m-3  bg-black text-white">update</button>}
           </div>
         </div>
   </>

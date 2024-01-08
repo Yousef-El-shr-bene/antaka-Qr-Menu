@@ -30,3 +30,7 @@ body {
 .transition{
   transition: 0.8s ease;
 }
+
+input {
+ border: 1px; 
+}
