@@ -18,13 +18,20 @@ export default function RootLayout({
     <html lang="en">
       
       <body className={inter.className}>
-      <div className="bg-slate-300 w-full h- text-black flex items-center justify-around text-2xl">
-        <h1>serch</h1>
-        <h1>antaka</h1>
-        <h1>filter</h1>
+      <div className="bg-emerald-700 w-full p-3 text-black flex items-center justify-around text-2xl ">
+
+       <div className="join w-auto">
+  <input className="input input-bordered join-item" placeholder="search"/>
+  <button className="btn join-item rounded-r-full">search</button>
+</div>
+
+        <h1 className='text-lg' >antakha</h1>
       </div>
       <div className='bg-white text-black ' >
       {children}
+      </div>
+      <div className="bg-slate-300 w-full h- text-black flex items-center justify-around text-2xl">
+<h1> يتم تتبيق 15% ضريبة قيمة مضافة و 16% ضريبو سرفيس </h1>
       </div>
         </body>
     </html>

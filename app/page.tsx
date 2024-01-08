@@ -33,7 +33,7 @@ export default function Home() {
     <main className="flex flex-col w-full h-full  items-center justify-center content-center ">
 
       <div className="flex flex-col w-full justify-center items-center ">
-        <button className="bottom-1 rounded-lg w-11/12 m-5 h-3 p-10 text-center text-2xl btn bg-emerald-700 hover:bg-300">
+        <button className="bottom-1 rounded-lg w-11/12 m-5 h-3 p-10 text-center text-2xl btn bg-emerald-800 hover:bg-emerald-300">
           recomndation
         </button>
         <div className="flex flex-row justify-center items-center flex-wrap">
@@ -50,7 +50,7 @@ export default function Home() {
 // اضافة منتج *
 // تعديل علي منتج *
 // حذف منتج *
-// تسجيل الدخول
+// تسجيل الدخول *
 // بحث
 // فلتر
 // ديزين

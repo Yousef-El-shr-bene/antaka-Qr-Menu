@@ -44,8 +44,6 @@ export  function InputsEdit({crdData}: any) {
        })
     }
   }, [data]);
-
-
   function uplode() {
     setimgeror("");
     setnameeror("");
@@ -76,7 +74,6 @@ export  function InputsEdit({crdData}: any) {
       });
     }
   }
-
   return <>
           <div className="flex flex-col w-80 h-auto m-10 items-center justify-center content-center bg-white text-black">
           <div className="flex flex-col text-center">
