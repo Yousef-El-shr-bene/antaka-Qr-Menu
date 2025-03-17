@@ -3,13 +3,8 @@ import React, { useRef } from "react";
 import { Crd } from "../items/Crd";
 import {
   collection,
-  addDoc,
-  getDoc,
-  QuerySnapshot,
   query,
   onSnapshot,
-  setDoc,
-  updateDoc
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db, storage } from "../firebase";
@@ -26,7 +21,7 @@ export default function admin() {
   useEffect( () => {
    ifAuth(router)
       const q = query(collection(db, "items"));
-      const unsubscribe = onSnapshot( q ,( querySnapshot: [{ description: string; img: string; name: string; price: number }] | any) => {
+      onSnapshot( q ,( querySnapshot: [{ description: string; img: string; name: string; price: number }] | any) => {
           let itemsAray: string[] | any = [];
           querySnapshot.forEach((doc: {
             id: any;

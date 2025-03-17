@@ -8,13 +8,13 @@ import { Dispatch, SetStateAction } from "react";
 
 
 // Your web app's Firebase configuration
-export const firebaseConfig = {
-  apiKey: "AIzaSyDfePvpZSbYPFNaRQNNyH4n56Vg5cRMBOc",
-  authDomain: "antka-qr-menu.firebaseapp.com",
-  projectId: "antka-qr-menu",
-  storageBucket: "antka-qr-menu.appspot.com",
-  messagingSenderId: "579955433042",
-  appId: "1:579955433042:web:53fbf155868c39a966898b"
+const firebaseConfig = {
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase

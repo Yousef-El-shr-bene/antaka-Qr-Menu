@@ -9,13 +9,14 @@ export  function EditDoc({crdData} : { crdData :{ description: string, img: stri
     const [onEdit,setonEdit] = useState(false)
 
      function deleteDocFun() {
+      console.log(db,"items",id);
+      
        deleteDoc(doc(db,"items",id));
     }
     
     return <div className="flex justify-center items-center flex-col" > <button onClick={ () => crd ? usecrd(false) : usecrd(true)}> <div className={`flex flex-col justify-center items-center h-auto w-80 m-10 card bg-slate-50 hover:bg-slate-200 transition ${onEdit ? "hidden" : ""}`}>
     <img
       src={img}
-      alt="Chicken-Alfredo-Pasta"
       className={`w-full h-72    shadow-2xl ${crd ? "rounded-t-2xl" : "rounded-2xl" } `}
     />
     <div className="card-title p-1">{name}</div>
