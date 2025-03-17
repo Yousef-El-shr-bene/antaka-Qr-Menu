@@ -5,10 +5,20 @@ import {
   query,
   onSnapshot,
 } from "firebase/firestore";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { db } from "./firebase";
+import Loding from "./items/Loding";
 export default function Home() {
-  const [item, setitem] = useState([{description : "" , img : "" , name : "" , price : "" , category : ""}]);
+  interface ItemType {
+    id: string;
+    description: string;
+    img: string;
+    name: string;
+    price: number;
+    category: string;
+  }
+
+  const [item, setitem] = useState<ItemType[]>([]);
   const [serch , setreach] = useState("")
   const [recomind,setrecomind] = useState(false)
   useEffect(() => {
@@ -60,27 +70,27 @@ export default function Home() {
           <button className={`bg-inherit hover:bg-inherit text-black border-0  h-24 w-24 btn ${serch === "drink hot drink" ? "" : "hidden"}`} onClick={()=>{setreach(serch + " Without espresso"); setrecomind(!recomind)}} > <img src="https://firebasestorage.googleapis.com/v0/b/antka-qr-menu.appspot.com/o/antaka-sores%2FWithout-espresso.jpg?alt=media&token=f4f30031-4d53-4548-8c85-1b924c809424" alt="" className="w-full h-auto rounded-2xl"/> Without espresso</button>
 
           </div>
-          <input type="text" value={serch} className="input input-bordered input-md mt-10 bg-white text-black border-0 input-disabled text-center " />
         </div>
 
         <div className="flex flex-row justify-center items-center flex-wrap">
-          {item.map((crdData,i)=>{
+          {item.length === 0 ? <Loding /> : item.map((crdData,i)=>{
             const LOserch = serch.toLowerCase()
             const LOserchArr = LOserch.split(" ")
             if (LOserch === "") {
-              
-              return <>
-          <Crd crdData={crdData} key={i} />
-          </>
+
+              return <Crd crdData={{ ...crdData, price: crdData.price.toString() }} key={i} />
+
             }else if(crdData.name.toLowerCase().includes(LOserch) || crdData.description.toLowerCase().includes(LOserch) || crdData.category.toLowerCase().includes(LOserch) || LOserchArr.includes(crdData.description.toLowerCase()) || LOserchArr.includes(crdData.name.toLowerCase()) || LOserchArr.includes(crdData.category.toLowerCase())  ){
-              
-              return <>
-          <Crd crdData={crdData} key={i} />
-          </>
+
+              return <Crd crdData={{ ...crdData, price: crdData.price.toString() }} key={i} />
+
             }
-             } )}
+             } ) }
         </div>
       </div> 
+      <div className="fixed bottom-0 z-10 bg-slate-50 shadow-2xl w-full text-black flex items-center justify-around text-2xl">
+      <h1 className=' w-full text-center text-sm' > All Prices Subject to 12% Servic & 14% VAT </h1>
+      </div>
     </main>
   );
 }

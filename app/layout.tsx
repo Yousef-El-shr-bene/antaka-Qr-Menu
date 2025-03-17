@@ -17,11 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <div className='bg-white text-black ' >
+      <div className='bg-white text-black min-h-screen min-w-screen' >
       {children}
-      </div>
-      <div className="fixed bottom-0 z-10 bg-slate-50 shadow-2xl w-full text-black flex items-center justify-around text-2xl">
-      <h1 className=' w-full text-center text-sm' > All Prices Subject to 12% Servic & 14% VAT </h1>
       </div>
         </body>
     </html>

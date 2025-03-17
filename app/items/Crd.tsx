@@ -7,7 +7,7 @@ export  function Crd({ crdData} : { crdData : {description : string , img : stri
     return <button onClick={ () => crd ? usecrd(false) : usecrd(true)}> <div className="flex flex-col justify-center items-center h-auto w-80 m-10 card bg-slate-50 hover:bg-slate-200 transition ">
     <img
       src={img}
-      alt="Chicken-Alfredo-Pasta"
+      alt={name}
       className={`w-full h-72    shadow-2xl ${crd ? "rounded-t-2xl" : "rounded-2xl" } `}
     />
     <div className="card-title p-1 ">{name}</div>
